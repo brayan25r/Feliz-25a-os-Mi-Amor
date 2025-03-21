@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" placeholder="Ingresa tu usuario" required>
+
+            <label for="fecha">Contraseña (D/M/A):</label>
+            <input type="date" id="fecha" required>
+
+            <button type="button" onclick="validarLogin()">Iniciar Sesión</button>
+        </form>
+        <p id="errorMensaje" class="error-mensaje"></p>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Historia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            font-family: 'Arial', sans-serif;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            max-width: 90%;
+            position: relative;
+        }
+
+        .side-image {
+            width: 450px;
+            height: 650px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .video-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        video {
+            width: 87%;
+            max-width: 700px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .side-image {
+                width: 140px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="imagenes/1.png" alt="Nosotros" class="side-image">
+
+        <div class="video-container">
+            <video controls autoplay>
+                <source src="video/0227.mp4" type="video/mp4">
+            </video>
+            <h1>"⏳💖Somos un reloj de arena en un mundo acelerado💕🌎"</h1>
+        </div>
+
+        <img src="imagenes/2.png" alt="Nosotros" class="side-image">
+    </div>
+
+</body>
+</html>

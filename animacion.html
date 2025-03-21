@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Fotos</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #FFDEE9, #B5FFFC);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100vh;
+        }
+
+        .carousel-container {
+            width: 100vw;
+            background: linear-gradient(to right, #f5d6e0, #dbeeff);
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100vw;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .carousel img {
+            width: calc(89vw / 10);
+            height: auto;
+            object-fit: cover;
+            margin: 0;
+            border-radius: 10px;
+            animation: scroll 2s linear infinite;
+ 
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+
+        .cake-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 450px;
+            text-align: center;
+            gap: 2px;
+            position: relative; 
+            margin-top: 30px; /* Mueve la caja hacia abajo */
+            z-index: 1;
+        }
+
+        .cake-container img {
+            max-width: 450px;
+            height: auto;
+            position: absolute;
+            margin-right: 1000px;
+            margin-left: -100px;
+            margin-top: -60px;
+            z-index: 0;
+        }
+
+        .text-button-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center; /* Centra el texto y el botón */
+            margin-top: -50px; /* Baja un poco el texto */
+        }
+
+        .text-button-container p {
+            text-align: center;
+            margin: 0;
+            max-width: 500px; /* Limita el ancho del texto */
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #ff6b81;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .music-container {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .music-button {
+            background-color: #ff6b81;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+      <!-- Contenedor del audio -->
+      <div class="music-container">
+        <button class="music-button" onclick="toggleMusic()">⏯️ Música</button>
+    </div>
+
+    <!-- Audio con autoplay -->
+    <audio id="background-music" autoplay loop>
+        <source src="musica/cumple.m4a" type="audio/mp3">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="imagenes/sheyla04.jpeg" alt="Foto 1">
+                <img src="imagenes/sheyla05.jpeg" alt="Foto 2">
+                <img src="imagenes/sheyla08.jpeg" alt="Foto 3">
+                <img src="imagenes/sheyla07.jpeg" alt="Foto 4">
+                <img src="imagenes/sheyla09.jpeg" alt="Foto 5">
+                <img src="imagenes/sheyla01.jpeg" alt="Foto 6">
+                <img src="imagenes/sheyla11.jpeg" alt="Foto 7">
+                <img src="imagenes/foto20.jpeg" alt="Foto 8">
+                <img src="imagenes/foto16.jpeg" alt="Foto 1">
+                <img src="imagenes/foto15.jpeg" alt="Foto 2">
+                <img src="imagenes/foto17.jpeg" alt="Foto 3">
+                <img src="imagenes/sheyla07.jpeg" alt="Foto 4">
+                <img src="imagenes/sheyla11.jpeg" alt="Foto 5">
+                <img src="imagenes/sheyla01.jpeg" alt="Foto 6">
+                <img src="imagenes/sheyla09.jpeg" alt="Foto 7">
+                <img src="imagenes/sheyla04.jpeg" alt="Foto 8">
+                <img src="imagenes/sheyla01.jpeg" alt="Foto 6">
+                <img src="imagenes/sheyla11.jpeg" alt="Foto 7">
+                <img src="imagenes/foto20.jpeg" alt="Foto 8">
+            </div>
+        </div>
+    </div>
+
+    <div class="cake-container">
+        <img src="imagenes/pastel.png" alt="Torta de Cumpleaños">
+        <div class="text-button-container">
+            <div>
+                <p>"Feliz cumpleaños, mi amorcito ❤️"</p>
+                <p>Hoy es un día muy especial porque celebramos tu vida,</p>
+                <p>la vida de la persona más maravillosa que he tenido la</p>
+                <p>suerte de conocer. Desde el primer momento en que te</p>
+                <p>vi, supe que serías alguien importante en mi vida, pero</p>
+                <p>nunca imaginé que te convertirías en mi todo. Eres mi</p>
+                <p>amor, mi compañera y mi mayor felicidad. Cada sonrisa</p>
+                <p>tuya ilumina mi mundo, y cada momento a tu lado es un</p>
+                <p>regalo que atesoro con todo mi corazón. Hoy deseo que la</p>
+                <p>felicidad te rodee, que cada deseo que pidas se haga realidad</p>
+                <p>y que este nuevo año de vida te traiga aún más amor, sueños</p>
+                <p>y momentos inolvidables. Y, sobre todo, que nunca olvides</p>
+                <p>cuánto te amo y cuánto significas para mí.</p>
+                <p>Feliz cumpleaños, mi vida. 🎂✨ Siempre estaré</p>
+                <p>aquí para celebrarte y amarte todos los días."</p>
+                
+            </div>
+            <button class="button" onclick="nextPage()">Siguiente Página</button>
+        </div>
+    </div>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="imagenes/ft01.jpeg" alt="Foto 9">
+                <img src="imagenes/ft02.jpeg" alt="Foto 10">
+                <img src="imagenes/ft03.jpeg" alt="Foto 11">
+                <img src="imagenes/ft04.jpeg" alt="Foto 12">
+                <img src="imagenes/ft05.jpeg" alt="Foto 13">
+                <img src="imagenes/foto13.jpeg" alt="Foto 14">
+                <img src="imagenes/imagen8.jpeg" alt="Foto 15">
+                <img src="imagenes/imagen9.jpeg" alt="Foto 16">
+                <img src="imagenes/foto14.jpeg" alt="Foto 9">
+                <img src="imagenes/imagen4.jpeg" alt="Foto 10">
+                <img src="imagenes/imagen5.jpeg" alt="Foto 11">
+                <img src="imagenes/imagen6.jpeg" alt="Foto 12">
+                <img src="imagenes/sheyla10.jpeg" alt="Foto 12">
+                <img src="imagenes/foto12.jpeg" alt="Foto 12">
+                <img src="imagenes/ft03.jpeg" alt="Foto 11">
+                <img src="imagenes/ft04.jpeg" alt="Foto 12">
+                <img src="imagenes/ft05.jpeg" alt="Foto 13">
+                <img src="imagenes/foto13.jpeg" alt="Foto 14">
+                <img src="imagenes/foto15.jpeg" alt="Foto 2">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMusic() {
+            var audio = document.getElementById("background-music");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+
+    <script>
+        function nextPage() {
+            window.location.href = "ultimo.html";
+        }
+    </script>
+
+</body>
+</html>

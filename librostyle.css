@@ -1,0 +1,273 @@
+.photo-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.photo-item {
+    width: 102%; /* Aumenta el ancho del contenedor */
+}
+
+.photo-item img {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 1000px; /* Ajusta este valor si quieres que sea más grande */
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.music-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.music-button {
+    background-color: #ff6b81;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    max-height: 100vh;
+    overflow: hidden;
+    background-color: #264653;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.flipbook {
+    margin: 3em auto;
+    width: 1000px;
+    margin-left: 200px;
+    height: 850px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    display: block;
+}
+
+.flipbook .leaf {
+    position: absolute;
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 50%;
+    background-color: #fff;
+    left: 50%;
+    transition: transform 1s;
+    transform: rotate3d(0, 1, 0, 0deg);
+    transform-origin: left 0px;
+}
+
+.flipbook .leaf .page {
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.flipbook .leaf .page.front {
+    transform: rotate3d(0, 1, 0, 0deg) translate3d(0, 0, 0.1px);
+}
+
+.flipbook .leaf .page.front:not(.external) {
+    box-shadow: inset 5px 0px 5px -5px #0005;
+}
+
+.flipbook .leaf .page.back {
+    transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 0.1px);
+}
+
+.flipbook .leaf .page.back:not(.external) {
+    box-shadow: inset -5px 0px 5px -5px #0005;
+}
+
+.disable {
+    user-select: none;
+    opacity: 0.6;
+}
+
+.title {
+    text-align: center;
+    width: 100%;
+    padding-top: 2em;
+}
+
+.page {
+    padding: 1em;
+}
+
+.page.front {
+    border-radius: 0em 1em 1em 0;
+}
+
+.page.back {
+    border-radius: 1em 0em 0em 1em;
+}
+
+.leaf {
+    background-color: #0000 !important;
+}
+
+.pageNumber {
+    font-size: 0.75em;
+    position: absolute;
+    bottom: 0.5em;
+}
+
+.front .pageNumber {
+    right: 0.75em;
+}
+
+.back .pageNumber {
+    left: 0.75em;
+}
+
+.contents-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.contents-row .spacer {
+    flex: 1 1;
+    height: 1em;
+    border-bottom: 1px dashed #000;
+}
+
+.contents-row .text {
+    flex: 0 0 auto
+}
+
+h1, h2, h3 {
+    font-family: cursive;
+}
+
+p {
+    font-size: 0.95em;
+}
+
+body[onload] {
+    transform: scale(1.5);
+    transform-origin: center top;
+}
+
+body[onload] .leaf:nth-child(1) {
+    transform: rotate3d(0, 1, 0, -128deg) !important;
+}
+
+body[onload] .leaf:nth-child(2) {
+    transform: rotate3d(0, 1, 0, -70deg) !important;
+}
+
+body[onload] .leaf:nth-child(3) {
+    transform: rotate3d(0, 1, 0, -40deg) !important;
+}
+
+body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
+    background-color: #e76f51;
+}
+
+.cd__intro {
+    background: #c0e;
+}
+
+/* Nueva regla para los botones debajo del libro */
+.controls {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 20px; /* Espacio entre el libro y los botones */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #FF6347;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FF4500;
+}
+
+/* Estilos para las fotos y los mensajes */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.photo-item input {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Estilos para el botón de sorpresa */
+.surprise-button {
+    margin-top: 20px;
+    background-color: #0000;
+}
+
+.surprise-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #009BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.surprise-button button:hover {
+    background-color: #005F8A;
+}
+
+#surpriseButton {
+    position: absolute; /* Permite moverlo en relación al contenedor */
+    bottom: 460px; /* Ajusta este valor para subir el botón */
+    left:55%;
+    transform: translateX(-50%); /* Centrar horizontalmente */
+    background-color: #009BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}

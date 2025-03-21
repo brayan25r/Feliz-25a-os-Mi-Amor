@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros-orpresa</title>
+    <link rel="stylesheet" href="librostyle.css">
+</head>
+<body>
+ 
+    <div class="flipbook centered" id="flipbook">
+        <!-- Página 1 -->
+        <div class="leaf">
+            <div class="page front title external" style="background-color: #1697be;">
+                <h1>NUESTRA HISTORIA</h1>
+                <img src="imagenes/foto2.jpeg" style="width: 100%; height: auto;">
+            </div>
+                 <!-- Contenedor del audio -->
+      <div class="music-container">
+        <button class="music-button" onclick="toggleMusic()">⏯️ Música</button>
+    </div>
+
+    <!-- Audio con autoplay -->
+    <audio id="background-music" autoplay loop>
+        <source src="musica/videoplayback.m4a" type="audio/mp3">
+    </audio>
+            <div class="page back" style="background-color: #F4A261;">
+                <div class="photo-grid">
+                    <div class="photo-item">
+                        <img src="imagenes/sheyla01.jpeg" alt="photo1">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Cada momento a tu lado es mágico, un tesoro que siempre guardaré en mi corazón."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/sheyla07.jpeg" alt="photo3">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Siempre agradezco al destino y a Dios por haberte puesto en mi camino en el momento perfecto."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/sheyla05.jpeg" alt="photo5">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Aunque ahora seas mi enamorada, sigues siendo la niña que me hace sonreír, la que me roba el corazón todos los días."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/sheyla11.jpeg" alt="photo6">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Gracias por cada abrazo, cada beso y cada sonrisa, porque transforman por completo mi día."TE ADORO </p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/sheyla06.jpeg" alt="photo6">
+                    </div>
+                </div>         
+            </div>
+        </div>
+
+        <!-- Página 2 -->
+        <div class="leaf">
+            <div class="page front" style="background-color: #F4A261;">
+                <div class="photo-grid">
+                    <div class="photo-item">
+                        <img src="imagenes/foto14.jpeg" alt="photo1">
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/foto15.jpeg" alt="photo2">
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/foto16.jpeg" alt="photo3">
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/foto17.jpeg" alt="photo4">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Tantas fotos, tantos momentos... y lo más hermoso es saber que nuestra historia sigue creciendo." ✨📸💕</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/foto13.jpeg" alt="photo6">
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/sheyla02.jpeg" alt="photo6">
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/sheyla03.jpeg" alt="photo6">
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/sheyla12.jpeg" alt="photo6">
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/sheyla13.jpeg" alt="photo6">
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/sheyla15.jpeg" alt="photo6">
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/sheyla14.jpeg" alt="photo6">
+                    </div>
+                </div>
+            </div>
+            <div class="page back" style="background-color: #F4A261;">
+                <div class="photo-grid">
+                    <div class="photo-item">
+                        <img src="imagenes/sheyla10.jpeg" alt="photo1">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Tú eres la historia más bonita que el destino escribió en mi vida."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/sheyla09.jpeg" alt="photo3">
+                    </div>
+                    <div class="photo-item">
+                        <p> "Cada día descubro más razones para enamorarme de ti."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/sheyla04.jpeg" alt="photo5">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Cuando miro tus ojos y te tengo entre mis brazos, me siento, sin dudarlo, la persona más dichosa del mundo. Has devuelto la felicidad a mi vida, eres mi amuleto de la suerte, del amor y de todo lo bello. Gracias, mi vida, por elegirme y por darme tu maravilloso amor."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/foto12.jpeg" alt="photo6">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Tu amor se refleja en cada detalle, en cada gesto y en cada decisión. Gracias por hacer que todo valga la pena."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/foto20.jpeg" alt="photo6">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página 3 -->
+        <div class="leaf">
+            <div class="page front" style="background-color: #F4A261;">
+                <div class="photo-item">
+                    <img src="imagenes/foto2.jpeg" alt="foto grande" style="width: 100%; max-width: 600px; height: auto;">
+                    <p style="text-align: center; color: black; font-size: 18px;">"Desde nuestras primeras risas hasta los momentos más serenos, cada instante contigo es un regalo. Sigamos escribiendo nuestra historia, porque quiero vivirla a tu lado para siempre."</p>
+                </div>
+            </div>
+            <div class="page back" style="background-color: #F4A261;">
+                <div class="photo-grid">
+                    <div class="photo-item">
+                        <img src="imagenes/imagen3.jpeg" alt="photo1">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Cada detalle que te entrego lleva un pedazo de mi corazón, porque todo lo que soy, te lo ofrezco a ti con amor."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/imagen8.jpeg" alt="photo3">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Empezar el 2025 a tu lado fue el sueño más hermoso hecho realidad. Gracias por cada momento maravilloso que compartimos."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/imagen6.jpeg" alt="photo5">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Eres mi último pensamiento antes de dormir y el primero que ilumina mi mente al despertar."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/imagen4.jpeg" alt="photo5">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Conectar contigo ha sido el regalo más hermoso de mi vida. Eres la mujer que siempre soñé tener a mi lado."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/imagen9.jpeg" alt="photo5">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="leaf">
+            <div class="page front" style="background-color: #F4A261;">
+                <div class="photo-grid">
+                    <div class="photo-item">
+                        <img src="imagenes/amor2.jpeg" alt="photo1">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Te amo con todo mi corazón, mi amor. Gracias por llegar a mi vida y llenarla de paz, amor y felicidad."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/amor3.jpeg" alt="photo2">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Mi lugar favorito siempre será entre tus brazos."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/amor8.jpeg" alt="photo6">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Cada beso contigo es una promesa de amor eterno."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/amor10.jpeg" alt="photo6">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Eres la melodía que da ritmo a cada latido de mi corazón."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/amor11.jpeg" alt="photo6">
+                    </div>
+                </div>
+            </div>
+            <div class="page back" style="background-color: #F4A261;">
+                <div class="photo-grid">
+                    <div class="photo-item">
+                        <img src="imagenes/amor7.jpeg" alt="photo1">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Nuestro amor es un libro sin final, donde cada página está llena de nuevas aventuras."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/amor5.jpeg">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Contigo aprendí que el amor verdadero no se busca, simplemente llega en el momento perfecto."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/amor14.jpeg" alt="photo5">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Cada 'te amo' que te digo es un reflejo de todo lo que siento por ti, aunque ninguna palabra sea suficiente."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/amor15.jpeg" alt="photo6">
+                    </div>
+                    <div class="photo-item">
+                        <p>"Amar es sencillo cuando la persona indicada llega a tu vida… Y tú eres mi persona indicada."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/amor13.jpeg" alt="photo6">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Página 4 -->
+        <div class="leaf">
+            <div class="page front" style="background-color: #F4A261;">
+                <div class="photo-grid">
+                    <div class="photo-item">
+                        <img src="imagenes/ft01.jpeg" alt="photo1">
+                    </div>
+                    <div class="photo-item">
+                        <p>"No existen palabras que puedan describir la felicidad que siento cada vez que te pienso."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/ft02.jpeg" alt="photo3">
+                    </div>
+                    <div class="photo-item">
+                       <p>"Si pudieras verte a través de mis ojos, entenderías lo mucho que te adoro y lo increíble que eres."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/ft03.jpeg" alt="photo5">
+                    </div>
+                    <div class="photo-item">
+                      <p>"Gracias por tu apoyo incondicional, por ser una compañía maravillosa. Y recuerda, mi amor, que siempre podrás contar conmigo."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/ft04.jpeg" alt="photo5">
+                    </div>
+                    <div class="photo-item">
+                        <p>"El 07 siempre será mi número de la suerte, porque ese día la vida me bendijo con un amor tan bonito, que llena mi alma de alegría, paz y tranquilidad. Te adoro, mi tóxica jijiji."</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagenes/ft05.jpeg" alt="photo5">
+                    </div>
+                </div>
+            </div>
+            <div class="page back external" style="background-color: #1697be; font-size: 24px;">
+                <p>Amorcito,
+
+                    Este es un pequeño detalle que preparé con todo mi cariño, con la esperanza de que te guste y te emocione tanto como a mí me emocionó hacerlo para ti. Este álbum de nuestras fotos es solo un pedacito de todo lo que hemos vivido juntos. Sé que faltan muchas más, pero elegí aquellas que han marcado mi corazón, las que siempre me hacen sonreír al recordarlas.
+                    
+                    Gracias por ser como eres, por darme todo tu amor, por tu ternura, tus abrazos y tu apoyo incondicional. A tu lado me siento feliz, tranquilo y, sobre todo, lleno de paz. No sabes cuán afortunado me siento de haberte encontrado, de que el destino nos haya unido en el momento perfecto. Estoy profundamente agradecido de que seas tú quien me acompaña en esta hermosa aventura llamada vida.
+                    
+                    Cada día contigo es un regalo, y cada momento a tu lado se convierte en un recuerdo invaluable. No quiero alargar más esto, pero sí quiero recordarte cuánto te adoro. Eres todo lo que siempre soñé y mucho más.
+                    
+                    Así que, sin más, te dejo con este pequeño detalle y una sorpresa que estoy seguro de que te encantará. Te adoro muchísimo, mi amor. ¡Haz clic y disfruta de lo que sigue! 😊😊😍</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Botones debajo del libro -->
+    <div class="controls centered">
+        <button id="prevPage">Anterior</button>
+        <button id="nextPage">Siguiente</button>
+    </div>
+
+    <!-- Botón sorpresa al final -->
+    <div class="surprise-button centered" id="surpriseButton" style="display: none;">
+        <button id="boton_sopresa"onclick="showSurprise()">¡Sorpresa!</button>
+    </div>
+
+    <script>
+        let currentPage = 0; // Página actual, inicializada en la primera página
+        const totalPages = document.querySelectorAll('.leaf').length; // Total de páginas
+        const surpriseButton = document.getElementById('surpriseButton'); // El botón sorpresa
+    
+        // Función para ir a la siguiente página
+        document.getElementById('nextPage').addEventListener('click', function() {
+            if (currentPage < totalPages - 1) {
+                currentPage++;
+                updatePages();
+            }
+        });
+    
+      
+    
+        // Función para mostrar el botón sorpresa solo al final del libro
+        function updatePages() {
+            // Si estamos en la última página, mostrar el botón
+            if (currentPage === totalPages - 1) {
+                surpriseButton.style.display = 'block'; // Muestra el botón
+            } else {
+                surpriseButton.style.display = 'none'; // Oculta el botón
+            }
+        }
+
+
+    </script>
+
+<script>
+    function toggleMusic() {
+        var audio = document.getElementById("background-music");
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+</script>
+    
+    <script src="libro.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+/* Fondo con imágenes */
+.login-body {
+    background: url('imagenes/foto1.png'), url('imagenes/fondo2.jpg'), url('imagenes/fondo3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del formulario */
+.login-container {
+    width: 320px;  /* Contenedor más angosto */
+    padding: 70px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.login-container label {
+    display: block; /* Hace que las etiquetas estén arriba del input */
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: -7px; 
+}
+
+.login-container input {
+    width: 90%;
+    padding: 9px;
+    font-size: 14px;
+    margin-bottom: 16px; /* Espacio entre los inputs */
+}
+
+.login-container button {
+    width: 70%;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px; /* Espacio entre el último input y el botón */
+}
+
+input, button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff1e50;
+
+}
+
+.error-mensaje {
+    color: red;
+    margin-top: 10px;
+}
+

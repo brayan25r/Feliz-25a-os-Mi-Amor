@@ -1,0 +1,160 @@
+.mensaje-final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 192, 203, 0.9); /* Fondo rosado semitransparente */
+    text-align: center;
+    z-index: 1000;
+}
+
+.mensaje-final h1 {
+    font-size: 50px;
+    color: #ff4081;
+    margin-bottom: 20px;
+}
+
+#botonSorpresa {
+    font-size: 25px;
+    padding: 15px 30px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botonSorpresa:hover {
+    background-color: #e6005c;
+}
+
+/*////////////////////////////CANDADO///////////////////////////////////////*/
+
+body {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    background-color: #ffebf0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee); /* Degradado bonito */
+}
+
+.gif-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* O ajusta según el espacio que necesites */
+}
+
+#gifMensaje {
+    width: 250px; /* Ajusta el tamaño según lo necesites */
+    max-width: 100%;
+    margin-left: 400px;
+    display: block; /* Asegura que se muestre correctamente */
+}
+
+button {
+    background: #ff4081;
+    color: white;
+    width: 260px;
+    padding: 10px 20px;
+    border: none;
+    margin: 20px auto;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.lock-container {
+    display: flex;
+    justify-content: flex-start; /* Alinea el candado a la izquierda */
+    align-items: center;
+    height: 100vh; /* Mantiene la altura completa */
+    padding-left: 100px; /* Ajusta el espacio desde la izquierda */
+    gap:80px; /* Espacio entre el candado y el botón */
+    
+}
+
+.candado {
+    width: 500px;  /* Tamaño exacto */
+    max-width: 100%;  /* Evita que crezca más allá de su contenedor */
+    height: auto;  /* Mantiene la proporción */
+}
+.candado.abierto {
+    transform: rotateY(180deg) rotate(15deg); /* Rotación al abrir */
+    opacity: 0; /* Se desvanece */
+}
+
+/* Contenedor de las preguntas */
+.question-container {
+    margin-top: 20px; /* Espacio superior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+/* Estilo para los botones de respuestas */
+#answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px; /* Espacio entre los botones */
+    width: 100%;
+    max-width: 500px;
+}
+
+#answers button {
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 200px;
+    background: #ff4081;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    flex: 1 1 calc(33.33% - 20px); /* Divide en 3 columnas */
+    max-width: 200px; /* Controla el tamaño */
+}
+
+#answers button:nth-child(1),
+#answers button:nth-child(2),
+#answers button:nth-child(3) {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: 180px;
+}
+
+#answers button:nth-child(4) {
+    flex-basis: 100%; /* Ocupa toda la fila */
+    text-align: center;
+    max-width: 10px;
+}
+
+#answers button:hover {
+    background: #e6005c;
+}
+
+@media (max-width: 768px) {
+    #answers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #answers button {
+        width: 90%;
+    }
+}

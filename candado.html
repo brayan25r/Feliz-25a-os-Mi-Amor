@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbloqueo Mágico</title>
+    <link rel="stylesheet" href="candadostyle.css">
+</head>
+<body>
+    <div class="container"> 
+        <div class="lock-container" id="lockContainer">
+            <img id="candado"src="imagenes/cerrado.png" alt="Candado cerrado" class="candado">
+            <button id="botonDesbloqueo" onclick="mostrarPreguntas()">🔓 Amor Desbloquéalo</button>
+            <div id="preguntas" style="display: none;">
+
+                <!-- ✅ Mensaje y GIF arriba de la pregunta -->
+                <div id="mensajeContainer" style="display: none; text-align: center;">
+                    <p id="mensaje"></p>
+                    <img id="gifMensaje" src="" alt="GIF de respuesta">
+                </div>
+
+                <p id="preguntaTexto"></p>
+                <div id="opciones"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mensajeFinal" class="mensaje-final" style="display: none;">
+        <h1>🎉 ¡Felicitaciones, amorcito! 🎉</h1>
+        <button id="botonSorpresa" onclick="mostrarSorpresa()">Sorpresa</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
